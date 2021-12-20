@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <style type="text/css">
+        .words {
+            font-family: Hannotate SC;
+        }
+    </style>
+
+    <div class="words">
+        <center>
+            <h1>モリモリの たのしいルーレット！</h1>
+            <br>
+            <h2>理想の告白プランを考えよう！</h2>
+        </center>
+    </div> 
+    <br>
+  </head>
+  <body>
+    <style type="text/css">
+        .outline {
+          text-align:center;
+        }
+        .roulette1 {
+          display: inline-block;
+          border:1px solid #000000;
+          font-size:40px;
+          width:400px;
+          font-family: Hannotate SC;
+        }
+        .roulette2 {
+          display: inline-block;
+          border:1px solid #000000;
+          font-size:40px;
+          width:400px;
+          font-family: Hannotate SC;
+        }
+        .roulette3 {
+          display: inline-block;
+          border:1px solid #000000;
+          font-size:40px;
+          width:400px;
+          font-family: Hannotate SC;
+        }
+      </style>
+      <script language="javascript" type="text/javascript">
+        var roulette;
+  
+        // ルーレットを開始
+        function start() {
+          roulette = setInterval(function() {
+            // var idx = Math.floor( Math.random() * 99 ) + 1;
+            const idx_message1 = ["公園で", "学校で", "トイレで", "自室で", "兵庫で", "米国で", "山口で", "天国で", "太宰府で", "井の中で"];
+            const idx_message2 = ["花束を", "メガネを", "Macbookを", "ペンを", "マスクを", "名刺を", "バイデンを", "あなたを", "量子力学を", "5000万円を"];
+            const idx_message3 = ["あげる", "叩き割る", "握る", "被る", "欺く", "観察する", "見つける", "助ける", "奪う", "汚す"];
+            const idx_1 = Math.floor(Math.random() * idx_message1.length) + 1;
+            const idx_2 = Math.floor(Math.random() * idx_message2.length) + 1;
+            const idx_3 = Math.floor(Math.random() * idx_message3.length) + 1;
+            // ルーレット
+            // document.getElementById("roulette1").innerHTML = idx_1;
+            // document.getElementById("roulette2").innerHTML = idx_2;
+            // document.getElementById("roulette3").innerHTML = idx_3;
+            document.getElementById("roulette1").innerHTML = idx_message1[ Math.floor( Math.random() * idx_message1.length )];
+            document.getElementById("roulette2").innerHTML = idx_message2[ Math.floor( Math.random() * idx_message2.length )];
+            document.getElementById("roulette3").innerHTML = idx_message3[ Math.floor( Math.random() * idx_message3.length )];
+            // document.getElementById("roulette").innerHTML = idx;
+          }, 100);
+        }
+   
+        // ルーレットを停止
+        function stop() {
+          if(roulette) {
+            clearInterval(roulette);
+            document.getElementById("roulette1").innerHTML = "ちんぽにゃ！";
+            document.getElementById("roulette2").innerHTML = "ちんぽにゃ！";
+            document.getElementById("roulette3").innerHTML = "ちんぽにゃ！";
+          }
+        }
+      </script>
+    <div class="outline">
+      <div class="roulette1" id="roulette1">ここが変わるよ！</div>
+      <div class="roulette2" id="roulette2">ここが変わるよ！</div>
+      <div class="roulette3" id="roulette3">ここが変わるよ！</div>
+      <br/>
+      <input type="button" value="スタート！" id="start" onclick="start();"/>
+      <input type="button" value="ストップ！" id="stop" onclick="stop();"/>
+    </div>
+  </body>
+</html>
+# Kenta-morimori.github.io
